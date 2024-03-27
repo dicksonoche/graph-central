@@ -5,5 +5,11 @@ export interface CustomButtonProps {
     containerStyles?: string;
     handleClick?: 
     MouseEventHandler<HTMLButtonElement>;
+    btnType?: 'button' | 'submit';
 }
-/* Interface speccifies how a specific structure should look like. What variables and values it should have*/
+
+export interface SearchProjectsProps {
+    project: string;
+    setProject: (project: string) => void;/* A function that takes in project as a string, returning nothing */
+}
+/* Interface specifies how a specific structure should look like. What variables and values it should have*/
