@@ -14,21 +14,23 @@ const Hero = () => {
         <div className='hero'>
             <div className='flex-1 pt-36 padding-x'>
                 <h1 className='hero__title'>
-                    Find, book or rent a car -- quickly and easily
+                    Graph Central
                 </h1>
                 <p className='hero__subtitle'>
-                    Streamline your car rental experience with our effortless booking process
+                    Your go-to source for in-depth insights and metrics on Grants and Governance Improvement Proposals in The Graph's thriving ecosystem.
                 </p>
 
                 <CustomButton
-                    title="Explore Cars"
+                    title="Explore Projects"
                     containerStyles="bg-primary-blue text-white rounded-full mt-10"
                     handleClick={handleScroll}
                 />
             </div>
             <div className='hero__image-container'>
                 <div className='hero__image'>
-                    <Image src="/hero.png" alt="hero" fill className='object-contain' />
+                    <h1 className='mt-12 hero__title-overlay'>
+                        Grants <br /> Governance Improvement <br /> Proposals [GIPs] <br /> ...and Others
+                    </h1>
                 </div>
                 <div className='hero__image-overlay' />
             </div>

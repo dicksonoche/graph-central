@@ -46,6 +46,10 @@
   @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
 }
 
+.hero__title-overlay {
+  @apply 2xl:text-[62px] sm:text-[45px] text-[40px] font-bold pt-20 leading-tight text-right text-white;
+}
+
 .hero__subtitle {
   @apply text-[27px] text-black-100 font-light mt-5;
 }

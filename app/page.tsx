@@ -2,8 +2,16 @@ import CustomFilter from "@/components/CustomFilter";
 import Hero from "@/components/Hero";
 import SearchBar from "@/components/SearchBar";
 import Image from "@/node_modules/next/image";
+import { fetchProjects } from "@/utils/index";
 
 export default async function Home() {
+
+  const allProjects = await fetchProjects()
+
+  console.log(allProjects)
+
+  const isDataEmpty = !Array.isArray(allProjects) || allProjects.length <1 || !allProjects
+
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -22,6 +30,17 @@ export default async function Home() {
             <CustomFilter title="timeframe" />
           </div>
         </div>
+
+        {!isDataEmpty ? (
+          <section>
+            Projects availabe
+          </section>
+        ) : (
+          <div className="home__error-container">
+            <h2 className="text-black text-xl font-bold">No results</h2>
+            <p>{allProjects?.message}</p>
+          </div>
+        )}
       </div>
     </main>
   );
